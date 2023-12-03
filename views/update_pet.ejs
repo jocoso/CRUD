@@ -1,0 +1,74 @@
+<!-- Including header -->
+<%- include('include/_header') %>
+<!-- /Including header -->
+
+<!-- MAIN -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i> All Pets </a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Pet</h2>
+            <span class="text-light">Update your pet's data</span>
+        </div>
+        
+        <!-- Add Form -->
+        <!-- Form -->
+        <form method="POST" id="update_pet">
+            <div class="new_pet">
+                
+                <div class="form-group">
+                    <label for="name" class="text-light">Pet Name</label>
+                    <input type="hidden" name="id" value="">
+                    <input type="text" name="name" value="" placeholder="Oliver">
+                </div>
+
+                <div class="form-group">
+                    <label for="picture" class="text-light">Picture</label>
+                    <input type="file" name="image" value="">
+                </div>
+
+                <div class="radio inline">
+                    
+                    <label for="" class="text-light">Pet Name</label>
+                    
+                    <input type="radio" id="radio-1" name="species" value="lizard">
+                    <label for="radio-1">Lizard</label>
+                    
+                    <input type="radio" id="radio-2" name="species" value="cat">
+                    <label for="radio-2" class="radio-label">Cat</label>
+
+                    <input type="radio" id="radio-3" name="species" value="dog">
+                    <label for="radio-3" class="radio-label">Dog</label>
+
+                    <input type="radio" id="radio-4" name="species" value="spider">
+                    <label for="radio-4" class="radio-label">Spider</label>
+
+                    <input type="radio" id="radio-5" name="species" value="hamster">
+                    <label for="radio-5" class="radio-label">Hamster</label>
+
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" name="friendly" value="true">
+                    <label for="friendly"> Is Friendly? </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Introduce</button>
+                </div>
+
+            </div>
+            
+        </form>
+
+    </div>
+</main>
+<!-- /MAIN-->
+
+<!-- Including footer -->
+<%- include('include/_footer') %>
+<!-- /Including footer -->
