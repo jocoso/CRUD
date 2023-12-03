@@ -22,43 +22,49 @@
                 
                 <div class="form-group">
                     <label for="name" class="text-light">Pet Name</label>
-                    <input type="hidden" name="id" value="">
-                    <input type="text" name="name" value="" placeholder="Oliver">
+                    <input type="hidden" name="id" value="<%= pet._id %>">
+                    <input type="text" name="name" value="<%= pet.name %>">
                 </div>
 
                 <div class="form-group">
-                    <label for="picture" class="text-light">Picture</label>
-                    <input type="file" name="image" value="">
+                    <label for="img" class="text-light">Picture</label>
+                    <input type="text" name="img" value="<%= pet.img %>">
+                </div>
+
+                
+                    
+                <label for="" class="text-light">Pet Name</label>
+                <div class="radio inline">
+                    <input type="radio" id="radio-1" name="specie" value="Lizard" <%= pet.specie == "Lizard" ? 'checked' : '' %>>
+                    <label for="radio-1" class="radio-label">Lizard</label>
+                </div>
+                <div class="radio inline">
+                    <input type="radio" id="radio-2" name="specie" value="Cat" <%= pet.specie == "Cat" ? 'checked' : '' %>>
+                    <label for="radio-2" class="radio-label">Cat</label>
                 </div>
 
                 <div class="radio inline">
-                    
-                    <label for="" class="text-light">Pet Name</label>
-                    
-                    <input type="radio" id="radio-1" name="species" value="lizard">
-                    <label for="radio-1">Lizard</label>
-                    
-                    <input type="radio" id="radio-2" name="species" value="cat">
-                    <label for="radio-2" class="radio-label">Cat</label>
-
-                    <input type="radio" id="radio-3" name="species" value="dog">
+                    <input type="radio" id="radio-3" name="specie" value="Dog" <%= pet.specie == "Dog" ? 'checked' : '' %>>
                     <label for="radio-3" class="radio-label">Dog</label>
+                </div>
 
-                    <input type="radio" id="radio-4" name="species" value="spider">
+                <div class="radio inline">
+                    <input type="radio" id="radio-4" name="specie" value="Spider" <%= pet.specie == "Spider" ? 'checked' : '' %>>
                     <label for="radio-4" class="radio-label">Spider</label>
+                </div>
 
-                    <input type="radio" id="radio-5" name="species" value="hamster">
+                <div class="radio inline">
+                    <input type="radio" id="radio-5" name="specie" value="Hamster" <%= pet.specie == "Hamster" ? 'checked' : '' %>>
                     <label for="radio-5" class="radio-label">Hamster</label>
-
                 </div>
 
                 <div class="form-group">
-                    <input type="checkbox" name="friendly" value="true">
+                    <input type="checkbox" name="friendly" value="true" <%= pet.friendly ? 'checked' : '' %>>
                     <label for="friendly"> Is Friendly? </label>
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn text-dark update">Introduce</button>
+                    <button type="submit" class="btn text-dark update">Re-Introduce</button>
                 </div>
 
             </div>
