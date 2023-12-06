@@ -1,21 +1,24 @@
 
 <% for(var i=0; i < pets.length; i++) {%>
-<tr>
-    <td><%= pets[i].name %></td>
-    <td><img src=<%= pets[i].img %> alt="" width="300"></td>
-    <td><%= pets[i].specie %></td>
-    <td>
+
+<div class="card">
+    <h2><%= pets[i].name %></h2>
+    <img src=<%= pets[i].img %> alt="" width="300">
+    <p>
+        Specie: <%= pets[i].specie %>
+    </p>
+    <p>
         <%=
-           pets[i].friendly ? "100% Would pet" : "Count your fingers after touching"; 
+            pets[i].friendly ? "100% Would pet" : "Count your fingers after touching"; 
         %>
-    </td>
-    <td>
+    </p>
+    <span>
         <a href="/update-pet?id=<%= pets[i]._id%>" class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
         </a>
-        <a class="btn border-shadow delete">
+        <a class="btn border-shadow delete" data-id=<%= pets[i]._id %>>
             <span class="text-gradient"><i class="fas fa-times"></i></span>
         </a>
-    </td>
-</tr>
+    </span>
+</div>
 <% } %>

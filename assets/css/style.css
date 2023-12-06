@@ -90,6 +90,27 @@ a {
 table {
     border-spacing: 0px;
     width: 100%;
+    display: inline-block;
+}
+
+.deck {
+    width: 100%;
+    margin: 4em 1em;
+    overflow: auto;
+}
+
+.card {
+    float: left;
+    height: 400px;
+    width: 300px;
+    text-align: left;
+    margin: 2em .3em;
+}
+
+.card > h2 {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
 }
 
 .table td, .table th {
@@ -99,11 +120,12 @@ table {
     border-top: 1px solid var(--border);
 }
 
-.table td > a.btn {
-    padding: .3em 1em;
+.table td > a .btn {
+    padding: .7em 2em;
     font-size: 1.1em;
-    margin: 0.2em;
+    margin: 0.5em;
 }
+
 
 .table tr:hover {
     background-color: #06d6a0;
@@ -224,7 +246,7 @@ table {
     font-size: 1em;
     cursor: pointer;
     border-radius: .2em;
-    margin: .5em 0;
+    margin: .5em .2em;
 }
 
 #update_pet .form-group .btn:hover,

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 var schema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: [true, 'Name required'],
     },
     img: {
         type: String,
@@ -13,7 +13,7 @@ var schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    friendly: Boolean
+    friendly: Boolean,
 })
 
 const Petdb = mongoose.model('petdb', schema);

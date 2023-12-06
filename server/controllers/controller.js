@@ -17,10 +17,12 @@ exports.create = (req, res) => {
     });
 
     // save in database
+
     pet
         .save(pet)
         .then(data=> {
             //res.send(data);
+        
             res.redirect('/add-pet');
         })
         .catch(err => {
@@ -28,6 +30,7 @@ exports.create = (req, res) => {
                 message: err.message || "Something happened. We Apologize"
             });
         });
+
 }
 
 // Get Pets

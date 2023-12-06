@@ -13,6 +13,6 @@ route.get('/update-pet', services.update_pet);
 route.post('/api/pets', controllers.create);
 route.get('/api/pets', controllers.find);
 route.put('/api/pets/:id', controllers.update);
-route.post('/api/pets/:id', controllers.delete);
+route.delete('/api/pets/:id', controllers.delete);
 
 module.exports = route
